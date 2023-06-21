@@ -1,0 +1,20 @@
+<div class="main-container">
+    <div class="info">
+      <img src="../../../assets/imagenes/fondo.jpg" class="background-image">
+        <div class="bus">
+          <input class="busqueda" id="codigo" #codigo placeholder="Nombre profesional"><input class="busqueda1" id="codigo" #codigo2 placeholder="apellido profesional">
+          <button class="but1" type="button" (click)="busqueda(codigo.value, codigo2.value)">Buscar Profesional</button>
+        </div>
+        <div class="container">
+          <div *ngIf="stars.length === 0; else esFalso">
+            <h1>NO HAY ESTRELLAS QUE MOSTRAR</h1>
+          </div>
+          <ng-template #esFalso>
+            <ng-container *ngFor="let star of stars; let even = even; let i = index">
+              <app-card [starPadre]="star" [esImpar]="even" (quitar)="deleteStar($event)"></app-card>
+
+            </ng-container>
+          </ng-template>
+      </div>
+    </div>
+  </div>

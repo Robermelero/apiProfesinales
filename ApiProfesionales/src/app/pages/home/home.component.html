@@ -1,0 +1,22 @@
+<div class="main-container">
+    <div class="info">
+      <video id="background-video" autoplay loop muted>
+        <source src="../../../assets/imagenes/2022-04-12 12-00-08.mp4" type="video/mp4">
+      </video>
+      <div class="container">
+        <form class="añadir">
+          <h1>Modificar/Añadir estrella</h1>
+          <input class="busqueda" id="nombre" #nuevoNombre [value]="starModificado.name" placeholder="Name">
+          <input class="busqueda" id="apellido" #nuevoApellido [value]="starModificado.surname" placeholder="Surname">
+          <input class="busqueda" id="edad" #nuevaEdad [value]="starModificado.age" placeholder="Age">
+          <input class="busqueda" id="photo" #nuevaPhoto [value]="starModificado.photo" placeholder="Photo">
+          <input class="busqueda" id="nacionalidad" #nuevaNacionalidad [value]="starModificado.nationality" placeholder="Nationality">
+          <input class="busqueda" id="oscars" #nuevoOscar [value]="starModificado.oscarsNumber" placeholder="Oscars Number">
+          <input class="busqueda" id="profesion" #nuevaProfesion [value]="starModificado.profession" placeholder="Profession">
+          <button class="but" type="button" (click)="modificar(nuevoNombre.value, nuevoApellido.value, +nuevaEdad.value, nuevaPhoto.value, nuevaNacionalidad.value, +nuevoOscar.value, nuevaProfesion.value)">Modificar Estrella</button>
+          <button class="but" type="button" (click)="register(nuevoNombre.value, nuevoApellido.value, +nuevaEdad.value, nuevaPhoto.value, nuevaNacionalidad.value, +nuevoOscar.value, nuevaProfesion.value)">Añadir Estrella</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
